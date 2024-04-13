@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Success</title>
     <style>
-        /* Modal Styles */
+
         .modal {
             display: none;
             position: fixed;
@@ -45,9 +45,9 @@
     </style>
 </head>
 <body>
-    <!-- Modal -->
+
     <div id="myModal" class="modal">
-        <!-- Modal content -->
+
         <div class="modal-content">
             <span class="close">&times;</span>
             <h2>Welcome to EquiEd!</h2>
@@ -56,7 +56,7 @@
     </div>
 
     <script>
-        // Get the username and jolly message from Flask template
+
         var username = "{{ username }}";
         var jollyMessages = [
             "Here's to a fantastic day ahead, " + username + "!",
@@ -64,20 +64,19 @@
             "Great to see you here, " + username + "! Enjoy your time on the portal!"
         ];
 
-        // Randomly select a jolly message
         var jollyMessage = jollyMessages[Math.floor(Math.random() * jollyMessages.length)];
 
-        // Display the modal with the welcome message
+  
         var modal = document.getElementById("myModal");
         var span = document.getElementsByClassName("close")[0];
         var welcomeMessage = document.getElementById("welcomeMessage");
         welcomeMessage.innerHTML = jollyMessage;
         modal.style.display = "block";
 
-        // Close the modal when the user clicks on the close button
+
         span.onclick = function() {
             modal.style.display = "none";
-            // Redirect to home page or any other desired page
+         
             window.location.href = "{{ url_for('home') }}";
         }
     </script>
