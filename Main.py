@@ -4,7 +4,6 @@ import random
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'
 
-# Dummy user data for demonstration
 users = {'12': '12', '1': '1'}
 
 jolly_messages = [
@@ -19,9 +18,9 @@ def login():
         username = request.form['username']
         password = request.form['password']
         if username in users and users[username] == password:
-            # Randomly select a jolly message
+
             jolly_message = random.choice(jolly_messages)
-            # Show prompt with jolly message
+
             return render_template('login_success.html', username=username, jolly_message=jolly_message)
         else:
             flash('Invalid username or password!', 'error')
@@ -33,10 +32,10 @@ def register_prompt():
 
 @app.route('/register', methods=['POST'])
 def register():
-    # Handle registration logic here
+
     username = request.form['username']
     password = request.form['password']
-    # Example: Add the new user to the users dictionary
+
     users[username] = password
     flash('Registration successful!', 'success')
     return redirect(url_for('login'))
@@ -63,13 +62,13 @@ def quiz2():
 
 @app.route('/video')
 def video():
-    # Dummy video data for demonstration
+
     videos = [{'title': 'Video 1', 'url': 'https://www.youtube.com/embed/dQw4w9WgXcQ'}]
     return render_template('video.html', videos=videos)
 
 @app.route('/course-selection')
 def course_selection():
-    # Dummy course data for demonstration
+
     courses = [{'title': 'Course 1', 'description': 'Description of Course 1'},
                {'title': 'Course 2', 'description': 'Description of Course 2'}]
     return render_template('course_selection.html', courses=courses)
