@@ -11,7 +11,7 @@ EquiEd is a web application aimed at empowering individuals, particularly focusi
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+Run the Start.bat
 
 ### Prerequisites
 
