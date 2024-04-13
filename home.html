@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EquiEd - Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* CSS Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Navigation Styles */
+        nav {
+            background-color: #444;
+            padding: 10px 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ffd700;
+        }
+
+        /* Main Content Styles */
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        .hero {
+            background-image: url('https://as2.ftcdn.net/v2/jpg/03/73/68/93/1000_F_373689376_7Y2d124ff49SRqvFTBixB1T6YWzymquj.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-bottom: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+
+        .hero h2 {
+            font-size: 2.5rem;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            color: white;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            color: white;
+        }
+
+        .feature-list {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+
+        .feature-list .feature {
+            flex-basis: calc(25% - 20px);
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-list .feature:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-list .feature h3 {
+            margin-top: 0;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .feature-list .feature p {
+            color: #666;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Animation */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>EquiEd</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('quiz') }}">Quiz</a></li>
+            <li><a href="{{ url_for('video') }}">Videos</a></li>
+            <li><a href="{{ url_for('course_selection') }}">Courses</a></li>
+            <li><a href="{{ url_for('documents') }}">Documents</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="hero">
+            <div>
+                <h2>Empowering Education for All</h2>
+                <p>Join us in empowering girls through education for a brighter future.</p>
+            </div>
+        </div>
+        <div class="feature-list">
+            <div class="feature">
+                <h3>Take a Quiz</h3>
+                <p>Challenge your knowledge with interactive quizzes.</p>
+            </div>
+            <div class="feature">
+                <h3>Watch Videos</h3>
+                <p>Learn from our curated collection of educational videos.</p>
+            </div>
+            <div class="feature">
+                <h3>Explore Courses</h3>
+                <p>Discover a diverse range of courses to enhance your skills.</p>
+            </div>
+            <div class="feature">
+                <h3>Access Documents</h3>
+                <p>Find educational documents and resources for your studies.</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 EquiEd. All rights reserved.</p>
+    </footer>
+</body>
+</html>

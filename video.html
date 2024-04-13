@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EquiStudy - Videos</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #4CAF50; /* Green header */
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        /* Main Content Styles */
+        .container {
+            max-width: 960px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        .video-list {
+            margin-top: 20px;
+            list-style-type: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-gap: 20px;
+        }
+
+        .video-list li {
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .video-list li:hover {
+            transform: translateY(-5px);
+        }
+
+        .video-list li h2 {
+            margin-top: 0;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .video-list li iframe {
+            width: 100%;
+            height: 200px;
+            border: none;
+            border-radius: 8px;
+        }
+
+        .back-to-home {
+            display: block;
+            margin-bottom: 20px;
+            text-align: center;
+            text-decoration: none;
+            color: #333;
+            transition: color 0.3s ease;
+        }
+
+        .back-to-home:hover {
+            color: #4CAF50; /* Green color on hover */
+        }
+    </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <h1>Explore Educational Videos</h1>
+    </header>
+    <div class="container">
+        <a href="{{ url_for('home') }}" class="back-to-home"><i class="fas fa-arrow-left"></i> Back to Home</a>
+        <ul class="video-list">
+            <li>
+                <h2>Introduction to Derivatives</h2>
+                <iframe src="https://www.youtube.com/embed/N2PpRnFqnqY" frameborder="0" allowfullscreen></iframe>
+            </li>
+            <li>
+                <h2>Polynomials Introduction</h2>
+                <iframe src="https://www.youtube.com/embed/Vm7H0VTlIco" frameborder="0" allowfullscreen></iframe>
+            </li>
+            <li>
+                <h2>Full C# Course in 4Hrs</h2>
+                <iframe src="https://www.youtube.com/embed/GhQdlIFylQ8" frameborder="0" allowfullscreen></iframe>
+            </li>
+            <li>
+                <h2>Arduino Course</h2>
+                <iframe src="https://www.youtube.com/embed/DPqiIzK97K0" frameborder="0" allowfullscreen></iframe>
+            </li>
+            <li>
+                <h2>History of Bombay</h2>
+                <iframe src="https://www.youtube.com/embed/HzYo0o5aYJY" frameborder="0" allowfullscreen></iframe>
+            </li>
+            <li>
+                <h2>Artificial Intelligience</h2>
+                <iframe src="https://www.youtube.com/embed/qZXpgf8N6hs" frameborder="0" allowfullscreen></iframe>
+            </li>
+            <li>
+                <h2>Polynomials Introduction Part 2</h2>
+                <iframe src="https://www.youtube.com/embed/Vm7H0VTlIco" frameborder="0" allowfullscreen></iframe>
+            </li>
+            <!-- Add more videos as needed -->
+        </ul>
+    </div>
+</body>
+</html>

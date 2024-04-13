@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz 2</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Include the CSS styles from the provided styles */
+        /* CSS Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #3b8df7; /* Blue color */
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        /* Main Content Styles */
+        .container {
+            max-width: 960px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        .quiz-question {
+            margin-bottom: 20px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .quiz-question p {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+
+        .quiz-options label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+
+        /* Button Styles */
+        .btn {
+            background-color: #ff6961; /* Red color */
+            color: #fff;
+            padding: 14px 20px;
+            margin: 20px 0;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #ff4d4d; /* Darker red color on hover */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Quiz 2</h1>
+        <a href="{{ url_for('quiz') }}" class="back-to-quiz"><i class="fas fa-arrow-left"></i></a>
+    </header>
+    <div class="container">
+        <div class="quiz-question">
+            <p>1. What is the capital of Japan?</p>
+            <div class="quiz-options">
+                <label><input type="radio" name="q1" value="tokyo"> Tokyo</label>
+                <label><input type="radio" name="q1" value="seoul"> Seoul</label>
+                <label><input type="radio" name="q1" value="beijing"> Beijing</label>
+            </div>
+        </div>
+        <div class="quiz-question">
+            <p>2. Who is known as the father of modern physics?</p>
+            <div class="quiz-options">
+                <label><input type="radio" name="q2" value="newton"> Isaac Newton</label>
+                <label><input type="radio" name="q2" value="einstein"> Albert Einstein</label>
+                <label><input type="radio" name="q2" value="galileo"> Galileo Galilei</label>
+            </div>
+        </div>
+        <div class="quiz-question">
+            <p>3. What is the chemical symbol for gold?</p>
+            <div class="quiz-options">
+                <label><input type="radio" name="q3" value="au"> Au</label>
+                <label><input type="radio" name="q3" value="ag"> Ag</label>
+                <label><input type="radio" name="q3" value="cu"> Cu</label>
+            </div>
+        </div>
+        <div class="quiz-question">
+            <p>4. Who wrote the novel 'Pride and Prejudice'?</p>
+            <div class="quiz-options">
+                <label><input type="radio" name="q4" value="austen"> Jane Austen</label>
+                <label><input type="radio" name="q4" value="dickens"> Charles Dickens</label>
+                <label><input type="radio" name="q4" value="hawthorne"> Nathaniel Hawthorne</label>
+            </div>
+        </div>
+        <div class="quiz-question">
+            <p>5. What is the largest planet in our solar system?</p>
+            <div class="quiz-options">
+                <label><input type="radio" name="q5" value="jupiter"> Jupiter</label>
+                <label><input type="radio" name="q5" value="saturn"> Saturn</label>
+                <label><input type="radio" name="q5" value="neptune"> Neptune</label>
+            </div>
+        </div>
+        <button onclick="submitQuiz()" class="btn">Submit Quiz</button>
+    </div>
+
+    <script>
+        function submitQuiz() {
+            const answers = {
+                q1: document.querySelector('input[name="q1"]:checked').value,
+                q2: document.querySelector('input[name="q2"]:checked').value,
+                q3: document.querySelector('input[name="q3"]:checked').value,
+                q4: document.querySelector('input[name="q4"]:checked').value,
+                q5: document.querySelector('input[name="q5"]:checked').value,
+            };
+            console.log(answers);
+            // You can process the answers here, for example, send them to a server for grading.
+        }
+    </script>
+</body>
+</html>

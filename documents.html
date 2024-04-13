@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EquiStudy - Documents</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        /* Main Content Styles */
+        .container {
+            max-width: 960px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        .document-list {
+            margin-top: 20px;
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .document-list li {
+            background-color: #fff;
+            margin-bottom: 20px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .document-list li:hover {
+            transform: translateY(-5px);
+        }
+
+        .document-list li h2 {
+            margin-top: 0;
+            font-size: 1.5rem;
+            color: #333;
+        }
+
+        .document-list li p {
+            color: #666;
+        }
+
+        .document-list li a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .document-list li a:hover {
+            background-color: #555;
+        }
+
+        .back-to-home {
+            display: inline-block;
+            margin-bottom: 10px;
+            text-decoration: none;
+            color: #333;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-to-home i {
+            margin-right: 5px;
+        }
+
+        .back-to-home:hover {
+            color: #555;
+        }
+    </style>
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<body>
+    <header>
+        <h1>Welcome to EquiStudy</h1>
+    </header>
+    <div class="container">
+        <h2>Documents</h2>
+        <!-- Back to home link with arrow icon -->
+        <a href="{{ url_for('home') }}" class="back-to-home"><i class="fas fa-arrow-left"></i>Back to Home</a>
+        <ul class="document-list">
+            <li>
+                <h2>Science Textbook</h2>
+                <p>A comprehensive textbook covering various scientific disciplines, including physics, chemistry, and biology, designed for high school students.</p>
+                <a href="https://ncert.nic.in/textbook/pdf/jesc1ps.pdf" target="_blank">Read Document</a>
+            </li>
+            <li>
+                <h2>Environmental Science and Its Studies</h2>
+                <p>An academic document exploring the interdisciplinary field of environmental science, discussing topics such as ecology, environmental pollution, and sustainable development.</p>
+                <a href="https://www.ugc.gov.in/oldpdf/modelcurriculum/env.pdf" target="_blank">Read Document</a>
+            </li>
+            <li>
+                <h2>Fundamentals of High School Mathematics</h2>
+                <p>A foundational resource providing an introduction to essential mathematical concepts and principles typically covered in high school mathematics courses.</p>
+                <a href="https://www.forgottenbooks.com/en/download/FundamentalsofHighSchoolMathematics_10020947.pdf" target="_blank">Read Document</a>
+            </li>
+            <li>
+                <h2>Advanced High School Mathematics</h2>
+                <p>An advanced-level document delving into more complex mathematical topics beyond the standard high school curriculum, including calculus, linear algebra, and discrete mathematics.</p>
+                <a href="https://www.math.ksu.edu/~dbski/writings/further.pdf" target="_blank">Read Document</a>
+            </li>
+            <li>
+                <h2>Mathematics Worksheet</h2>
+                <p>A collection of practice problems and exercises aimed at reinforcing mathematical skills and concepts, suitable for high school students or anyone seeking to improve their math proficiency.</p>
+                <a href="https://www.math.utah.edu/~ahacon/notes.pdf" target="_blank">Read Document</a>
+            </li>
+            <li>
+                <h2>Mathematics Worksheet 2</h2>
+                <p>Another set of math worksheets offering additional practice opportunities across various mathematical topics, including algebra, geometry, and trigonometry.</p>
+                <a href="https://valenciacollege.edu/students/learning-support/west/math/documents/MAT0018CChapter6.pdf" target="_blank">Read Document</a>
+            </li>
+            
+            <!-- Add more documents as needed -->
+        </ul>
+    </div>
+</body>
+</html>
